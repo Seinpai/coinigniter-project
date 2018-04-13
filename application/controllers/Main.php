@@ -33,6 +33,13 @@ class Main extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
+    public function mydonation()
+    {
+        $this->load->view('templates/header');
+        $this->load->view('pages/mydonation');
+        $this->load->view('templates/footer');
+    }
+
 
     public function register()
         {
@@ -142,7 +149,7 @@ class Main extends CI_Controller {
                 $userInfo = $this->user_model->checkLogin($clean);
                 
                 if(!$userInfo){
-                    $this->session->set_flashdata('flash_message', 'The login was unsucessful');
+                    $this->session->set_flashdata('flash_message', 'Wrong Username / Password');
                     redirect(site_url().'main/login');
                 }                
                 foreach($userInfo as $key=>$val){

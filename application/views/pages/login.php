@@ -5,7 +5,8 @@
 			<?php
 			$fattr = array('class' => 'col s12');
 			echo form_open('/main/login', $fattr);
-			?>                <div class="row">
+			?>
+                <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">email</i>
 						<?php echo form_input(array('name'=>'email', 'id'=> 'email', 'type'=> 'text', 'placeholder'=>'Email', 'value'=> set_value('email'))); ?>
@@ -17,7 +18,8 @@
                     <div class="input-field col s12">
                         <i class="material-icons prefix">lock</i>
 						<?php echo form_input(array('name'=>'password', 'id'=> 'password', 'type'=> 'password', 'placeholder'=>'Password', 'value'=> set_value('password'))); ?>
-						<?php echo form_error('password','<span class="red-text">','</span>');?>
+                        <?php echo form_error('password','<span class="red-text">','</span>');?>
+                        <?php echo $this->session->flashdata('flash_message'); ?>
                         <label for="password">Password</label>
                     </div>
                 </div>
@@ -27,6 +29,8 @@
                 </button>
                 </div>
 			<?php echo form_close(); ?>
+            <a href="<?php echo base_url()?>forgot"><button id="btn-login" class="btn waves-effect waves-light right" style="right: 10px;" type="submit">Forgot Password
+            </button></a>
         </div>
     </div>
 </div>
