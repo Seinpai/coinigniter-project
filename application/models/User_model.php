@@ -9,6 +9,7 @@ class User_model extends CI_Model {
         parent::__construct();        
         $this->status = $this->config->item('status');
         $this->roles = $this->config->item('roles');
+        $this->load->helper('date');
     }    
     
     public function insertUser($d)
@@ -24,10 +25,34 @@ class User_model extends CI_Model {
             $this->db->query($q);
             return $this->db->insert_id();
     }
+
+    public function insertCampaign($d)
+    {  
+        $date = date('Y-m-d');
+            $string = array(
+                'user_id'=>$this->session->userdata['id'],
+                'campaign_name'=>$d['Campaign'],
+                'campaign_stater'=>"starter",
+                'campaign_current_fund'=>"0",
+                'campaign_target_fund'=>$d['targetfund'],
+                'campaign_description'=>$d['desc'],
+                'campaign_start_date'=>$date,
+                'campaign_end_date'=>$d['date']
+            );
+            $q = $this->db->insert_string('campaign',$string);             
+            $this->db->query($q);
+            return $this->db->insert_id();
+    }
     
     public function isDuplicate($email)
     {     
         $this->db->get_where('users', array('email' => $email), 1);
+        return $this->db->affected_rows() > 0 ? TRUE : FALSE;         
+    }
+
+    public function isDuplicate2($campaign)
+    {     
+        $this->db->get_where('campaign', array('campaign_name' => $campaign), 1);
         return $this->db->affected_rows() > 0 ? TRUE : FALSE;         
     }
     
@@ -85,6 +110,18 @@ class User_model extends CI_Model {
             return $row;
         }else{
             error_log('no user found getUserInfo('.$id.')');
+            return false;
+        }
+    }
+
+    public function getMyCampaign($id)
+    {
+        $q = $this->db->get_where('campaign', array('id' => $id), 1);
+        if($this->db->affected_rows() > 0){
+            $row = $q->row();
+            return $row;
+        }else{
+            error_log('no Campaign found in ('.$id.')');
             return false;
         }
     }

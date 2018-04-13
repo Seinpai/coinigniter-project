@@ -74,6 +74,30 @@ class Main extends CI_Controller {
                 };              
             }
         }
+
+        public function create_campaign()
+        {
+            $this->form_validation->set_rules('Campaign','campaign', 'required');
+            $this->form_validation->set_rules('targetfund', 'target fund', 'required');    
+            $this->form_validation->set_rules('desc', 'Description', 'required');    
+                       
+            if ($this->form_validation->run() == FALSE) {
+                $this->load->view('templates/header');
+                $this->load->view('pages/mycampaign');
+                $this->load->view('templates/footer');
+            }else{                
+                if($this->user_model->isDuplicate2($this->input->post('campaign'))){
+                    $this->session->set_flashdata('flash_message', 'User email already exists');
+                    redirect(site_url().'main/mycampaign');
+                }else{
+                    
+                    $clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
+                    $id = $this->user_model->insertCampaign($clean);
+                    redirect(site_url().'main/mycampaign');
+                    exit;
+                };              
+            }
+        }
         
         
         protected function _islocal(){
