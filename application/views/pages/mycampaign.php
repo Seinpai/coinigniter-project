@@ -19,7 +19,7 @@
     <div class="col s12 m9">
       <div class="card hoverable">
         <div class="card-content center">
-          <h2>Wahyu Kontol</h2>
+          <h2>My Campaign</h2>
 
           <div class="row">
           <a class="btn-floating btn-large waves-effect waves-light blue right modal-trigger" href="#modal1">
