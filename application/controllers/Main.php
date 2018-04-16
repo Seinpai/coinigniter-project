@@ -28,8 +28,10 @@ class Main extends CI_Controller {
 
 	public function mycampaign()
     {
+        //$id = $this->session->userdata['id'];
+        $data = $this->user_model->autoMycampaign(1);
         $this->load->view('templates/header');
-        $this->load->view('pages/mycampaign');
+        $this->load->view('pages/mycampaign',['data'=>$data]);
         $this->load->view('templates/footer');
     }
 

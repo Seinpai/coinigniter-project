@@ -26,13 +26,15 @@ class User_model extends CI_Model {
             return $this->db->insert_id();
     }
 
-    public function insertCampaign($d)
+    public function insertCampaign($id)
     {  
         $date = date('Y-m-d');
+        $id = $this->session->userdata['id'];
+        $name = $this->getusersname($id);
             $string = array(
-                'user_id'=>$this->session->userdata['id'],
+                'user_id'=>$id,
                 'campaign_name'=>$d['Campaign'],
-                'campaign_stater'=>"starter",
+                'campaign_stater'=>$name->last_name.' '.$name->first_name,
                 'campaign_current_fund'=>"0",
                 'campaign_target_fund'=>$d['targetfund'],
                 'campaign_description'=>$d['desc'],
@@ -43,7 +45,24 @@ class User_model extends CI_Model {
             $this->db->query($q);
             return $this->db->insert_id();
     }
-    
+    public function autoMycampaign($id)
+    {   
+        //$id = $this->session->userdata['id'];
+        $this->db->select('*');
+        $this->db->where('user_id', $id);
+        $query = $this->db->get('campaign');
+        $name = $query->row();
+        return $name; 
+    }
+    public function getusersname($id)
+    {
+        $this->db->select('first_name', 'last_name');
+        $this->db->limit(2);
+        $this->db->where('id', $id);
+        $query = $this->db->get('users');
+        $name = $query->row();
+        return $name; 
+    }
     public function isDuplicate($email)
     {     
         $this->db->get_where('users', array('email' => $email), 1);
@@ -118,8 +137,10 @@ class User_model extends CI_Model {
     {
         $q = $this->db->get_where('campaign', array('id' => $id), 1);
         if($this->db->affected_rows() > 0){
-            $row = $q->row();
-            return $row;
+            // $row = $q->row();
+            // return $row;
+            error_log('no Campaign found in ('.$id.')');
+            return false;
         }else{
             error_log('no Campaign found in ('.$id.')');
             return false;
