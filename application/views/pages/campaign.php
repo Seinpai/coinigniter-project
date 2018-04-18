@@ -1,14 +1,3 @@
-<?php
-$title = "Bantu Baby Shawqi Sembuh dari VSD CoA";
-$danaterkumpul = 300;
-$danamax = 400;
-$isfundedyet = 0;
-$deskripsi = "Bantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aorta";
-$campaignsterter = "Udin si Udin";
-$details = "Bantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aortaBantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aortaBantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aortaBantuBantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aortaBantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aorta";
-?>
-
-
 <main style="flex: 1 0 auto;">
 <div class="container">
     <div class="section">
@@ -76,8 +65,6 @@ $details = "Bantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jan
 				</ul>
 		    </div>
 		</div>
-
-
     </div>
 </div>
 </main>

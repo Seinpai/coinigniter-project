@@ -92,7 +92,7 @@
                   $convert = timespan($date1,$date2);
                   
                   Echo '<div class="card">
-                  <div class="content"><span>'.$value['campaign_stater'].'
+                  <div class="content"><span>'.$value['campaign_starter'].'
                   <i class="tiny material-icons">check_circle</i>
                   </span></div>
                   <a class="image" href="#">

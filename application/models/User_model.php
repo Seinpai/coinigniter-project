@@ -34,7 +34,7 @@ class User_model extends CI_Model {
             $string = array(
                 'user_id'=>$id,
                 'campaign_name'=>$d['Campaign'],
-                'campaign_stater'=>$name->last_name.' '.$name->first_name,
+                'campaign_starter'=>$name->last_name.' '.$name->first_name,
                 'campaign_current_fund'=>"0",
                 'campaign_target_fund'=>$d['targetfund'],
                 'campaign_description'=>$d['desc'],
