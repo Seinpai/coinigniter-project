@@ -13,6 +13,7 @@ class Main extends CI_Controller {
             $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
             $this->status = $this->config->item('status'); 
             $this->roles = $this->config->item('roles');
+            $this->load->helper('date');
         }      
     
 	public function index()
@@ -28,8 +29,8 @@ class Main extends CI_Controller {
 
 	public function mycampaign()
     {
-        //$id = $this->session->userdata['id'];
-        $data = $this->user_model->autoMycampaign(1);
+        $id = $this->session->userdata['id'];
+        $data = $this->user_model->autoMycampaign($id);
         $this->load->view('templates/header');
         $this->load->view('pages/mycampaign',['data'=>$data]);
         $this->load->view('templates/footer');

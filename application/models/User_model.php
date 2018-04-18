@@ -26,7 +26,7 @@ class User_model extends CI_Model {
             return $this->db->insert_id();
     }
 
-    public function insertCampaign($id)
+    public function insertCampaign($d)
     {  
         $date = date('Y-m-d');
         $id = $this->session->userdata['id'];
@@ -51,8 +51,8 @@ class User_model extends CI_Model {
         $this->db->select('*');
         $this->db->where('user_id', $id);
         $query = $this->db->get('campaign');
-        $name = $query->row();
-        return $name; 
+        $result = $query->result_array();
+        return $result; 
     }
     public function getusersname($id)
     {
