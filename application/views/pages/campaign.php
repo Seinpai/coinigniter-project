@@ -2,7 +2,7 @@
 <div class="container">
     <div class="section">
         <div class="middle">
-            <h4><?php echo $title; ?></h4>
+            <h4><?php echo $data['title']; ?></h4>
         </div>
 
         <div class="row">
@@ -11,12 +11,12 @@
             </div>
             <div class="col s12 m5">
                 <h5>Dana Terkumpul</h5>
-                <h6><?php echo $danaterkumpul?> dari <?php echo $danamax?></h6>
-            	<div class="ui indicating progress" data-value="<?php echo $danaterkumpul?>" data-total="<?php echo $danamax?>" id="example5">
+                <h6><?php echo $data['danaterkumpul']?> dari <?php echo $data['danamax']?></h6>
+            	<div class="ui indicating progress" data-value="<?php echo $data['danaterkumpul']?>" data-total="<?php echo $data['danamax']?>" id="example5">
                     <div class="bar"></div>
                 </div>
                 <?php
-                if ($isfundedyet == "0") {
+                if ($data['isfundedyet'] == "0") {
                 	echo '<a href="#testdonate" class="waves-effect waves-light btn-large ">Donate Now</a>';
                 }else{
                 	echo '<a href="#testdonate" class="waves-effect waves-light btn-large disabled">Donate Now</a>';
@@ -26,8 +26,8 @@
         </div>
         <div class="row">
             <div class="col s12 m12">
-                <h5 class="flow-text"><?php echo $deskripsi?></h5>
-                <a href="#name"><h5>started by <?php echo $campaignsterter?></h5></a>
+                <h5 class="flow-text"><?php echo $data['deskripsi']?></h5>
+                <a href="#name"><h5>started by <?php echo $data['campaignsterter']?></h5></a>
             </div>
         </div>
 
@@ -39,7 +39,7 @@
 		      </ul>
 		    </div>
 		    <div id="test1" class="col s12">
-		    	<p class="flow-text"><?php echo $details;?></p>
+		    	<p class="flow-text"><?php echo $data['details'];?></p>
 		    </div>
 		    <div id="test2" class="col s12 m6">
 		    	<ul class="collection">
