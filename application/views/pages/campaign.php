@@ -2,7 +2,7 @@
 <div class="container">
     <div class="section">
         <div class="middle">
-            <h4><?php echo $data['title']; ?></h4>
+            <h4><?php echo $data['campaign_name']; ?></h4>
         </div>
 
         <div class="row">
@@ -11,8 +11,8 @@
             </div>
             <div class="col s12 m5">
                 <h5>Dana Terkumpul</h5>
-                <h6><?php echo $data['danaterkumpul']?> dari <?php echo $data['danamax']?></h6>
-            	<div class="ui indicating progress" data-value="<?php echo $data['danaterkumpul']?>" data-total="<?php echo $data['danamax']?>" id="example5">
+                <h6><?php echo $data['campaign_current_fund']?> dari <?php echo $data['campaign_target_fund']?></h6>
+            	<div class="ui indicating progress" data-value="<?php echo $data['campaign_current_fund']?>" data-total="<?php echo $data['campaign_target_fund']?>" id="example5">
                     <div class="bar"></div>
                 </div>
                 <?php
@@ -26,8 +26,8 @@
         </div>
         <div class="row">
             <div class="col s12 m12">
-                <h5 class="flow-text"><?php echo $data['deskripsi']?></h5>
-                <a href="#name"><h5>started by <?php echo $data['campaignsterter']?></h5></a>
+                <h5 class="flow-text"><?php echo $data['campaign_description']?></h5>
+                <a href="#name"><h5>started by <?php echo $data['campaign_starter']?></h5></a>
             </div>
         </div>
 

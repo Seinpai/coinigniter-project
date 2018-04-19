@@ -26,6 +26,16 @@ class User_model extends CI_Model {
             return $this->db->insert_id();
     }
 
+    public function getCampaignById($id)
+    {
+        # code...
+        $this->db->select('*');
+        $this->db->where('id', $id);
+        $query = $this->db->get('campaign');
+        $result = $query->row_array();
+        return $result;
+    }
+
     public function insertCampaign($d)
     {  
         $date = date('Y-m-d');
