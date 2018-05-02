@@ -1,3 +1,4 @@
+<<<<<<< HEAD
           <div class="row container" style="margin-top:20px;">  
             <div class="col s12 m3">
         <div class="card hoverable">
@@ -22,6 +23,12 @@
             <div class="col s12 m9">
                 <h4>New Campaign</h4>
                 <div>
+=======
+            <div>
+              <div class="modal-content">
+                <h4>New Campaign</h4>
+                <div class="row">
+>>>>>>> fa87c5de105ff99bd12b32f6b3265d4d57846028
                   <?php  
                   $fattr = array('class' => 'col s12');
                   echo form_open('/main/create_campaign');?>
@@ -60,4 +67,11 @@
                   <?php echo form_close();?>
                 </div>
               </div>
+<<<<<<< HEAD
             </div>
+=======
+              <div class="modal-footer">
+
+              </div>
+            </div>
+>>>>>>> fa87c5de105ff99bd12b32f6b3265d4d57846028
