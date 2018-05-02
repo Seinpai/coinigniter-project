@@ -60,6 +60,7 @@ class User_model extends CI_Model {
         //$id = $this->session->userdata['id'];
         $this->db->select('*');
         $this->db->where('user_id', $id);
+        $this->db->order_by('campaign_start_date','desc');
         $query = $this->db->get('campaign');
         $result = $query->result_array();
         return $result; 
@@ -77,6 +78,16 @@ class User_model extends CI_Model {
     {     
         $this->db->get_where('users', array('email' => $email), 1);
         return $this->db->affected_rows() > 0 ? TRUE : FALSE;         
+    }
+
+    public function getAllCampaign()
+    {
+        # code...
+        $this->db->select('*');
+        $this->db->order_by('campaign_start_date','desc');
+        $query = $this->db->get('campaign');
+        $result = $query->result_array();
+        return $result;
     }
 
     public function isDuplicate2($campaign)
