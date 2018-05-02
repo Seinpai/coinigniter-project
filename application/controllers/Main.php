@@ -86,7 +86,7 @@ class Main extends CI_Controller {
                        
             if ($this->form_validation->run() == FALSE) {
                 $this->load->view('templates/header');
-                $this->load->view('pages/newcampaign');
+                $this->load->view('pages/mycampaign');
                 $this->load->view('templates/footer');
             }else{                
                 if($this->user_model->isDuplicate2($this->input->post('campaign'))){
