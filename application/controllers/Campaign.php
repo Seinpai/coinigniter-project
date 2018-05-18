@@ -22,7 +22,7 @@ class Campaign extends CI_Controller {
 
     public function campaign_by_id($id)
     {
-        # code...
+       //  code...
        //  $data = array('title' => "Bantu Baby Shawqi Sembuh dari VSD CoA",
        // 'danaterkumpul' => 300,
        // 'danamax' => 400,
@@ -31,6 +31,8 @@ class Campaign extends CI_Controller {
        // 'campaignsterter' => "Udin si Udin",
        // 'details' => "Bantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aortaBantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aortaBantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aortaBantuBantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aortaBantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aorta"
        //   );
+
+      
         
         $result = $this->user_model->getCampaignById($id);
 
@@ -50,6 +52,8 @@ class Campaign extends CI_Controller {
             }
 
             $data['isfundedyet'] = $isfundedyet;
+            $data['details'] = "Bantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aortaBantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aortaBantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aortaBantuBantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aortaBantu Baby Shawqi sembuh dari infeksi paru-paru, kebocoran bilik jantung dan penyempitan pembuluh aorta";
+
 
             $this->load->view('templates/header');
             $this->load->view('pages/campaign', ['data'=>$data]);

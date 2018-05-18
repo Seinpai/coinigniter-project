@@ -17,8 +17,12 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
+
+        $data = $this->user_model->getAllCampaign();
+        
+
 		$this->load->view('templates/header');
-		$this->load->view('pages/home');
+		$this->load->view('pages/home', ['data'=>$data]);
 		$this->load->view('templates/footer');
 	}
 }
