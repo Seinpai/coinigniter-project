@@ -58,6 +58,7 @@ class User_model extends CI_Model {
                 'campaign_current_fund'=>"0",
                 'campaign_target_fund'=>$d['targetfund'],
                 'campaign_description'=>$d['desc'],
+                'campaign_details'=>$d['details'],
                 'campaign_start_date'=>$date,
                 'campaign_end_date'=>$d['date']
             );

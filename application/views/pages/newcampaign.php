@@ -28,6 +28,13 @@
                   </div>
                   <div class="row">
                     <div class="input-field col s12">
+                      <?php echo form_textarea(array('name'=>'details', 'id'=> 'details', 'type'=> 'multiline  ', 'placeholder'=>'Campaign detail', 'value'=> set_value('details'), 'class' => 'materialize-textarea' )); ?>
+                      <?php echo form_error('desc','<span class="red-text">','</span>');?>
+                      <label for="detail">Campaign Details</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
                       <?php echo form_input(array('name'=>'date', 'id'=> 'date', 'type'=> 'text', 'placeholder'=>'yyyy/mm/dd', 'value'=> set_value('date'))); ?>
                       <label for="desc">Duration</label>
                     </div>

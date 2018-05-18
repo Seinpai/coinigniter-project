@@ -39,7 +39,7 @@
 		      </ul>
 		    </div>
 		    <div id="test1" class="col s12">
-		    	<p class="flow-text"><?php echo $data['details'];?></p>
+		    	<p class="flow-text"><?php echo $data['campaign_details'];?></p>
 		    </div>
 		    <div id="test2" class="col s12 m6">
 		    	<ul class="collection">

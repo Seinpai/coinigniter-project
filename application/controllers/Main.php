@@ -93,7 +93,6 @@ class Main extends CI_Controller {
                     $this->session->set_flashdata('flash_message', 'User email already exists');
                     redirect(site_url().'main/mycampaign');
                 }else{
-                    
                     $clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
                     $id = $this->user_model->insertCampaign($clean);
                     redirect(site_url().'main/mycampaign');
