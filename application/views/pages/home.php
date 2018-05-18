@@ -117,7 +117,7 @@
                   </a>
 
                   <div class="content">
-                    <a class="header" href="#">
+                    <a class="header" href="campaign/'.$value['id'].'">
                     '.$value['campaign_name'].' 
                     </a>
                   </div>
@@ -146,7 +146,7 @@
             </div>
 
             <div id="btn-show-more" class="row center">
-                <a class="btn waves-effect indigo pulse">Show More</a>
+                <a href="campaign" class="btn waves-effect indigo pulse">Show More</a>
             </div>
         </div>
       </div>

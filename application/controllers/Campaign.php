@@ -13,7 +13,11 @@ class Campaign extends CI_Controller {
 
     public function index()
     {
-        
+        $data = $this->user_model->getAllCampaign();
+
+        $this->load->view('templates/header');
+        $this->load->view('pages/allCampaign', ['data'=>$data]);
+        $this->load->view('templates/footer');
     }
 
     public function campaign_by_id($id)
