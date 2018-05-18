@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <body style="display: flex;min-height: 100vh;flex-direction: column;">
     <header>
-        <ul id="dropdown1" class="dropdown-content">
+        <ul id="dropdown-menu" class="dropdown-content">
 			<?php
 			if(!empty($this->session->userdata['email'])){
 				echo "<li>
@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a class="white-text" href="#donation">Donations</a>
                     </li>
                     <li>
-                        <a class="dropdown-button" href="#!" data-activates="dropdown1">
+                        <a class="dropdown-button" href="#!" data-activates="dropdown-menu">
 							<?php
 								if(empty($this->session->userdata['email'])){
 									echo "<i class=\"material-icons white-text right\">menu

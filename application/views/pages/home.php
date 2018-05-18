@@ -184,3 +184,5 @@
             </div>
         </div>
       </div>
+      <script src="<?php echo base_url()?>public/lib/typed.min.js" type="text/javascript"></script>
+      <script src="<?php echo base_url()?>public/js/main.js"></script>

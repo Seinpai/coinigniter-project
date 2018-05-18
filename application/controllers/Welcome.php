@@ -17,7 +17,7 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$id = $this->session->userdata['id'];
+		// $id = $this->session->userdata['id'];
 		$data = $this->user_model->getAllcampaign();
 		
 		$this->load->view('templates/header');

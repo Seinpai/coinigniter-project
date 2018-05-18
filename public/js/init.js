@@ -3,7 +3,6 @@
     $('.modal').modal();
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
-    $(".dropdown-trigger1").dropdown();
     $('.carousel').carousel();
     $('.carousel.carousel-slider').carousel({ fullWidth: true });
     window.setInterval(function () {
@@ -22,7 +21,5 @@
       $("#nav-bar").show();
       $("#search-bar").hide();
     });
-
-
   }); // end of document ready
 })(jQuery); // end of jQuery name space

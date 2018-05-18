@@ -44,8 +44,6 @@
 <script src="<?php echo base_url()?>public/js/materialize.min.js"></script>
 <script src="<?php echo base_url()?>public/js/plugins.js"></script>
 <script src="<?php echo base_url()?>public/js/init.js"></script>
-<script src="<?php echo base_url()?>public/js/main.js"></script>
-<script src="<?php echo base_url()?>public/lib/typed.min.js" type="text/javascript"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 

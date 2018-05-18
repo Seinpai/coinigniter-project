@@ -17,11 +17,18 @@
                 </div>
                 <?php
                 if ($data['isfundedyet'] == "0") {
-                	echo '<a href="#testdonate" class="waves-effect waves-light btn-large ">Donate Now</a>';
+                	echo '<a class="dropdown-button btn btn-large" href="#" data-activates="dropdown1">Donate Now</a>';
                 }else{
                 	echo '<a href="#testdonate" class="waves-effect waves-light btn-large disabled">Donate Now</a>';
                 }
-                ?>
+				?>
+				<!-- Dropdown Structure -->
+				<ul id='dropdown1' class='dropdown-content'>
+				<li><a href="#!"><i class="material-icons">payment</i>Paypal</a></li>
+				<li class="divider"></li>
+				<li><a href="#!"><i class="material-icons">attach_money</i>Bitcoin</a></li>
+				</ul>
+	  
             </div>
         </div>
         <div class="row">
@@ -68,3 +75,7 @@
     </div>
 </div>
 </main>
+
+<script>	
+	  $('.dropdown-trigger').dropdown();
+</script>
