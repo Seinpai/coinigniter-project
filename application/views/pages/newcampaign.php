@@ -1,34 +1,7 @@
-<<<<<<< HEAD
-          <div class="row container" style="margin-top:20px;">  
-            <div class="col s12 m3">
-        <div class="card hoverable">
-          <div class="card-image">
-            <img src="<?php echo base_url()?>public/img/background1-fix.jpg">
-          </div>
-          
-          <div class="card-content center">
-            <?php $first = $this->session->userdata['first_name'];$last = $this->session->userdata['last_name'];$full_name = $first.' '.$last; ECHO $full_name?>
-            <a class="waves-effect waves-light btn">Edit Profile</a>
-          </div>
-          <div class="card-action">
-           <ul>
-            <li><a href="<?php echo base_url()?>main" class="black-text">Overview</a></li>
-            <li><a href="<?php echo base_url()?>main/mycampaign" class="black-text">Campaign Saya</a></li>
-            <li><a href="<?php echo base_url()?>main/mydonation" class="black-text">Donasi Saya</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  
-            <div class="col s12 m9">
-                <h4>New Campaign</h4>
-                <div>
-=======
-            <div>
+            <div class="container">
               <div class="modal-content">
                 <h4>New Campaign</h4>
                 <div class="row">
->>>>>>> fa87c5de105ff99bd12b32f6b3265d4d57846028
                   <?php  
                   $fattr = array('class' => 'col s12');
                   echo form_open('/main/create_campaign');?>
@@ -67,11 +40,7 @@
                   <?php echo form_close();?>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-=======
               <div class="modal-footer">
 
               </div>
             </div>
->>>>>>> fa87c5de105ff99bd12b32f6b3265d4d57846028
