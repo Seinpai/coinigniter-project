@@ -24,9 +24,15 @@
 				?>
 				<!-- Dropdown Structure -->
 				<ul id='dropdown1' class='dropdown-content'>
-				<li><a href="#!"><i class="material-icons">payment</i>Paypal</a></li>
-				<li class="divider"></li>
-				<li><a href="#!"><i class="material-icons">attach_money</i>Bitcoin</a></li>
+					<form id="my_form_paypal" method="post" action="<?php echo base_url()?>paymentpaypal">
+						<input type="hidden" name="id" value="<?php echo $data['id']?>" />
+						<li><a href="javascript:{}" onclick="document.getElementById('my_form_paypal').submit();"><i class="material-icons">payment</i>Paypal</a></li>
+					</form>
+					<li class="divider"></li>
+					<form id="my_form_btc" method="post" action="<?php echo base_url()?>paymentbitcoin">
+							<input type="hidden" name="member_id" value="<?php echo $data['id']?>" />
+						<li><a href="javascript:{}" onclick="document.getElementById('my_form_btc').submit();"><i class="material-icons">attach_money</i>Bitcoin</a></li>
+					</form>
 				</ul>
 	  
             </div>
